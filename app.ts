@@ -39,7 +39,10 @@ app.get('/orders', async (req: Request, res: Response) => {
     res.send(messageContent)
   });
 
+  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 app.listen(port, async () => {
+  await delay(10000);
   await connectToRabbitMQ();
   console.log(`Server running on http://localhost:${port}`);
 });

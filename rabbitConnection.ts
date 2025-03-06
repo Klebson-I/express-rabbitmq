@@ -7,7 +7,7 @@ let connection: ChannelModel | null = null;
 
 export const connectToRabbitMQ = async () => {
   try {
-    const amqpServer = 'amqp://localhost:5672';
+    const amqpServer = 'amqp://rabbitmq:5672';
     connection = await connect(amqpServer) as ChannelModel;
     if (!connection) return;
     channel = await connection.createChannel();
