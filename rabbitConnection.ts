@@ -24,7 +24,7 @@ export const connectToRabbitMQ = async () => {
 
   } catch (error) {
     console.error('Error while connect to rabbit: ', error);
-    setTimeout(connect, RECONNECTION_TIMEOUT);
+    setTimeout(connectToRabbitMQ, RECONNECTION_TIMEOUT);
   }
 }
 
