@@ -1,0 +1,28 @@
+{
+    "dashboard": {
+      "id": null,
+      "uid": "rabbitmq-dashboard",
+      "title": "RabbitMQ Metrics",
+      "schemaVersion": 16,
+      "version": 0,
+      "panels": [
+        {
+          "title": "Messages Received",
+          "type": "graph",
+          "targets": [
+            {
+              "expr": "rabbitmq_global_messages_received_total",
+              "legendFormat": "received messages",
+              "refId": "A",
+              "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            }
+            }
+          ]
+        }
+      ]
+    },
+    "overwrite": true
+  }
+  
